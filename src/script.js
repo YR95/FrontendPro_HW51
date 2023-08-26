@@ -1,5 +1,5 @@
-import {createUsersFromRequst} from './api/components/HeroeFetching.js';
+import {createHeroesFromRequst} from './api/components/HeroeFetching.js';
 import {createUniverseFromReqeust} from './api/components/UniferseFetching.js';
 
-createUsersFromRequst("Heroes")
+createHeroesFromRequst("Heroes")
 createUniverseFromReqeust("Universes")
