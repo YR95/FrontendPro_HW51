@@ -17,6 +17,9 @@ export async function updateHeroeFavt(hero, data) {
   let heroUser = await controller(hero,'PUT',data);
   console.log(heroUser)
   return heroUser;
-
 }
-
+export async function deleteHeroe(hero, data) {
+  let heroUser = await controller(hero,'DELETE',data);
+  console.log(heroUser)
+  return heroUser;
+}
