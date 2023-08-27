@@ -5,12 +5,13 @@ import {renderHero} from './HeroeRender.js';
 export let heroesList = [];
 
 export async function createHeroesFromRequst(hero) {
+  heroesList=[];
   const heroes = await controller(hero);
   heroes.forEach(x => {
     heroesList.push(new Hero(x.id, x.name, x.comics, x.favourite));
   });
-  renderHero(heroesList);
-  console.log(heroesList);
+  // renderHero(heroesList);
+  // console.log(heroesList);
   return heroes;
 }
 export async function updateHeroeFavt(hero, data) {
