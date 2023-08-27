@@ -9,26 +9,28 @@
 </head>
 <body>
 
-<form class="heroes__form" id="heroesForm">
+<div class="heroes__form" id="heroesForm">
   <label>
-    Name Surname: <input type="text" placeholder="Iron Man" value="Iron Man"
+    Name Surname: <input id="heroName" type="text" placeholder="Iron Man"
+                         value="Iron Man"
                          data-name="heroName">
   </label>
   <label>
-    Comics: <select data-name="heroComics">
+    Comics: <select id="selectComics" data-name="heroComics">
     <option value="Marvel">Marvel</option>
     <option value="DC">DC</option>
+    <option value="Comix Zone">Comix Zone</option>
   </select>
   </label>
   <label>
     Favourite:
     <div class="heroFavouriteInput">
-      <input type="checkbox" data-name="heroFavourite">
+      <input id="heroFavIn" type="checkbox" data-name="heroFavourite">
     </div>
   </label>
 
-  <button>Add Hero</button>
-</form>
+  <button id="addHero">Add Hero</button>
+</div>
 
 <table class="heroes__table" id="heroesTable">
   <thead>

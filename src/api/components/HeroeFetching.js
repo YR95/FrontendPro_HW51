@@ -23,3 +23,8 @@ export async function deleteHeroe(hero, data) {
   console.log(heroUser)
   return heroUser;
 }
+export async function addHeroe(hero, data) {
+  let heroUser = await controller(hero,'POST',data);
+  console.log(heroUser)
+  return heroUser;
+}
