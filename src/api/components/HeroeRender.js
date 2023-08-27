@@ -1,3 +1,5 @@
+import {updateHeroeFavt} from './HeroeFetching.js';
+
 export function renderHero(list) {
   list.forEach(x => {
     let tr = document.createElement("tr");
@@ -15,5 +17,11 @@ export function renderHero(list) {
     tr.append(tdName, tdComics, tdFav);
     let table = document.querySelector("#heroesTableTbody");
     table.append(tr);
+
+    tdFav.addEventListener('click', () => {
+      x.favourite = !x.favourite;
+      updateHeroeFavt(`Heroes/${x.id}`, x);
+    });
+
   });
 }

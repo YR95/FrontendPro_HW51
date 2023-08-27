@@ -13,4 +13,10 @@ export async function createHeroesFromRequst(hero) {
   console.log(heroesList);
   return heroes;
 }
+export async function updateHeroeFavt(hero, data) {
+  let heroUser = await controller(hero,'PUT',data);
+  console.log(heroUser)
+  return heroUser;
+
+}
 
